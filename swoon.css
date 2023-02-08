@@ -1,5 +1,6 @@
 html {
   font: max(3ch, 5vmax + 3vmin) sans-serif;
+  line-height: 1.618;
 }
 
 body {
@@ -31,7 +32,7 @@ p {
 
 a {
   display: inline-flex;
-  padding: 1vmin;
+  padding-inline: .5ch;
 }
 
 b {
@@ -55,29 +56,33 @@ main {
   min-height: 100vh;
 }
 
+article {
+  letter-spacing: 2vw;
+}
+
 :root {
-  background: #ee1;
-  color: indigo;
-  background-image: radial-gradient(#ee1, gainsboro);
+  background-color: indigo;
+  background-image: radial-gradient(darkviolet, blueviolet);
+  color: lightpink;
 }
 
 :any-link {
-  background: darkviolet;
-  color: #ee1;
+  background: hotpink;
+  color: indigo;
 }
 
 ::selection {
-  background: hotpink;
+  background: powderblue;
   color: indigo;
 }
 
 @keyframes swoon {
   from {
-    text-shadow: 0 -1vh 0 mediumpurple;
+    text-shadow: 0 -1vh 0 hotpink;
   }
 
   to {
-    text-shadow: 0 -1vh 0 darkviolet;
+    text-shadow: 0 -1vh 0 darkorchid;
   }
 }
 
@@ -86,6 +91,11 @@ main {
 }
 
 :focus {
+  background: lightpink;
   box-shadow: 0 0 0 30vmax mediumpurple;
   outline: thick outset;
+}
+
+:hover {
+  text-decoration-style: double;
 }
